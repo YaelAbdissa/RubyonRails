@@ -1,0 +1,26 @@
+<table border="1" width="20%" cellpadding="10" cellspacing="0">
+    <thead>
+        <th> Title</th>
+        <th> Description </th>
+        <th> Price </th>
+        <th> Created Date</th>
+        <th></th>
+        <th></th>
+    </thead>
+    <tbody>
+        <% @book.each do |c| %>
+            <tr>
+                <td><%= c.title %></td>
+                <td><%= c.description %></td>
+                <td><%= c.price %></td>
+                <td><%=c.created_at %></td>
+                <td></td>
+                <td></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<p>
+    <%= link_to "Add book", {controller: "book", action: "new" } %> 
+</p>
